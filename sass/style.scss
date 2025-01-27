@@ -3,6 +3,7 @@ $text-color: #1f1a38;
 $highlight-color: #1f1a38;
 $link-hover: #C8A2C8;
 $container-max-width: 1200px;
+$font-heading: 'Gloock', serif;
 
 @mixin flex-center($direction: row, $gap: 0px) {
   display: flex;
@@ -20,12 +21,6 @@ $container-max-width: 1200px;
   }
 }
 
-@font-face {
-  font-family: 'Glitar';
-  src: url('fonts/Glitar.woff2') format('woff2'),
-       url('fonts/Glitar.woff') format('woff'),
-       url('/fonts/DxGlitar-free-font.ttf') format('truetype');
-}
 
 body {
   background-color: $background-dark;
@@ -140,10 +135,10 @@ body {
 
 
 h1 {
-  font-family: 'Glitar', sans-serif;
+  font-family: 'Gloock', sans-serif;
   text-align: center;
   color: $highlight-color;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   margin-top: 40px;
   font-size: 100px;
 }
