@@ -22,7 +22,9 @@ $container-max-width: 1200px;
 
 @font-face {
   font-family: 'Glitar';
-  src: url('/fonts/Glitar.ttf') format('truetype');
+  src: url('fonts/Glitar.woff2') format('woff2'),
+       url('fonts/Glitar.woff') format('woff'),
+       url('fonts/Glitar.ttf') format('truetype');
 }
 
 body {
