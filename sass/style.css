@@ -64,24 +64,24 @@ body {
   padding: 20px;
 }
 
-.link {
+.social-link {
   display: flex;
   align-items: left;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   justify-content: center;
   height: auto;
   gap: 25px;
 }
 
-.link img {
+.social-link img {
   width: 100%;
   height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease;
 }
-.link img:hover {
+.social-link img:hover {
   transform: scale(1.1);
 }
 
@@ -217,6 +217,10 @@ p {
     font-size: 30px;
   }
 }
+.main-content {
+  padding: 1rem;
+}
+
 .works-container {
   display: flex;
   flex-direction: column;
