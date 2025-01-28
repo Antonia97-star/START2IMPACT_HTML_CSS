@@ -3,7 +3,7 @@ $text-color: #1f1a38;
 $highlight-color: #1f1a38;
 $link-hover: #C8A2C8;
 $container-max-width: 1200px;
-$font-heading: 'Gloock', serif;
+$font-heading: 'Bowlby One SC', serif;
 
 @mixin flex-center($direction: row, $gap: 0px) {
   display: flex;
@@ -135,7 +135,7 @@ body {
 
 
 h1 {
-  font-family: 'Gloock', sans-serif;
+  font-family: 'Bowlby One SC', sans-serif;
   text-align: center;
   color: $highlight-color;
   letter-spacing: 10px;
