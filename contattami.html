@@ -4,17 +4,31 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contattami - Antonia Devoto </title>
+
+    <meta name="description" content="Contatta Antonia Devoto per collaborazioni, progetti di design UX/UI e molto altro.">
+    <meta name="author" content="Antonia Devoto">
+    <meta name="keywords" content="Antonia Devoto, UX/UI Design, Graphic Design, Contatti, Portfolio">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Contattami - Antonia Devoto">
+    <meta property="og:description" content="Visita la mia pagina contatti per collaborazioni e progetti di design.">
+    <meta property="og:image" content="https://tuosito.it/assets/img/anteprima.jpg">
+    <meta property="og:url" content="https://tuosito.it/contattami.html">
+    <meta property="og:type" content="website">
+
+  
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Gloock&family=Work+Sans:ital,
 wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 </head>
-    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="assets/sass/style.css">
 <body>
+ 
 
     <nav class="navbar"> 
       
@@ -26,7 +40,9 @@ wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         </ul>
       </nav>
       
-<h1> CONTATTAMI </h1>
+<main>
+
+  <h1> CONTATTAMI </h1>
 
       
 <form class="contact-form" action="#" method="POST">
@@ -34,19 +50,19 @@ wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="name">Nome</label>
-      <input id="name" type="text" name="from_name">
+      <input id="name" type="text" name="from_name" required>
     </div>
 
     <div class="form-group col-md-6">
       <label for="email">La tua Email</label>
-      <input id="email" type="email" name="from_email">
+      <input id="email" type="email" name="from_email" required>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group">
       <label for="message">Messaggio</label>
-      <textarea id="message" name="message"> </textarea>
+      <textarea id="message" name="message" required> </textarea>
     </div>
   </div>
   
@@ -69,17 +85,21 @@ wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
 
-    <div class="social-link">
+  </main>      
+
+    <div class="social-link-container">
+      <div class="social-link">
       <a href="https://www.linkedin.com/in/antonia-devoto-116197251/" target="_blank" class="social-link">
-        <img src="img/linkedin.png" alt="linkedin" class="social-icon">
+        <img src="assets/img/linkedin.png" alt="linkedin" class="social-icon">
     </a>
     <a href="https://www.instagram.com/iamthetoto/" target="_blank" class="social-link">
-      <img src="img/instagram.png" alt="instagram" class="social-icon">
+      <img src="assets/img/instagram.png" alt="instagram" class="social-icon">
     </a>
     <a href="https://github.com/Antonia97-star" target="_blank" class="social-link">
-      <img src="img/github.png" alt="github" class="social-icon">
+      <img src="assets/img/github.png" alt="github" class="social-icon">
     </a>
     </div>
+  </div>
 
 </body>
   </html>

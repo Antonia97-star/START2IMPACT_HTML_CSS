@@ -5,6 +5,11 @@ body {
   padding: 0;
   font-family: Urbanist, sans-serif;
 }
+@media (max-width: 768px) {
+  body {
+    padding: 0 15px;
+  }
+}
 
 .navbar {
   position: sticky;
@@ -12,6 +17,8 @@ body {
   z-index: 1000;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #e6c9e6;
+  padding: 10px 0;
 }
 .navbar ul {
   display: flex;
@@ -22,7 +29,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #e6c9e6;
+  transition: all 0.3s ease;
 }
 .navbar ul li {
   margin: 0 20px;
@@ -32,7 +39,6 @@ body {
   color: #1f1a38;
   font-weight: bold;
   font-size: 18px;
-  display: block;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
@@ -53,9 +59,6 @@ body {
   .navbar ul li {
     margin: 5px 0;
   }
-  .navbar ul li a {
-    font-size: 18px;
-  }
 }
 
 .container {
@@ -63,19 +66,23 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    width: 100%;
+  }
+}
 
 .social-link {
   display: flex;
-  align-items: left;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  align-items: center;
   justify-content: center;
-  height: auto;
   gap: 25px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
-
 .social-link img {
-  width: 100%;
+  width: 50px;
   height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -83,6 +90,15 @@ body {
 }
 .social-link img:hover {
   transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .social-link {
+    gap: 10px;
+  }
+  .social-link img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .bio-container {
@@ -110,6 +126,12 @@ body {
   margin: 15px 0;
   letter-spacing: 1px;
 }
+@media (max-width: 768px) {
+  .bio-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 
 h1 {
   font-family: "Bowlby One SC", sans-serif;
@@ -119,6 +141,11 @@ h1 {
   margin-top: 40px;
   font-size: 100px;
 }
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
 
 h2 {
   margin-bottom: 5px;
@@ -127,6 +154,11 @@ h2 {
   letter-spacing: 5px;
   color: #1f1a38;
   padding: 20px;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
 }
 
 h3 {
@@ -149,6 +181,11 @@ p {
   padding-bottom: 10px;
   width: 1450px;
   line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .paragrafo {
+    width: 100%;
+  }
 }
 
 .contact-form {
@@ -174,7 +211,8 @@ p {
   color: #ffffff;
   letter-spacing: 2px;
 }
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   height: 30px;
   border-radius: 5px;
   width: 100%;
@@ -184,7 +222,8 @@ p {
   border: 1px solid #7b506f;
   transition: border-color 0.3s ease;
 }
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: #ff00b7;
 }
@@ -208,16 +247,16 @@ p {
 .contact-form button:hover {
   background-color: black;
 }
-
 @media (max-width: 768px) {
   .contact-form {
     padding: 20px;
     max-width: 90%;
   }
-  h2 {
+  .contact-form h2 {
     font-size: 30px;
   }
 }
+
 .main-content {
   padding: 1rem;
 }
@@ -225,11 +264,10 @@ p {
 .works-container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
 }
-
-.link-container {
+.works-container .link-container {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -240,29 +278,26 @@ p {
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.link-container:hover {
+.works-container .link-container:hover {
   transform: scale(1.02);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-.works-photo img {
-  width: 300px;
+.works-container .link-container .works-photo img {
+  width: 200px;
   height: auto;
   margin-right: 15px;
   border-radius: 5px;
 }
-
-.works-text {
+.works-container .link-container .works-text {
   font-size: 18px;
   line-height: 1.5;
   text-align: left;
   margin: 0;
-  letter-spacing: 2px;
 }
-
-.works-text p {
-  color: white;
+@media (max-width: 768px) {
+  .works-container .link-container {
+    max-width: 90%;
+  }
 }
 
 .griglia-immagini {
@@ -284,4 +319,18 @@ p {
 
 .spazio-vuoto-social {
   height: 100px;
+}
+
+@media (max-width: 768px) {
+  .bio-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .paragrafo {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
