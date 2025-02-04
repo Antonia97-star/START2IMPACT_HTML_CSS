@@ -294,6 +294,9 @@ p {
   text-align: left;
   margin: 0;
 }
+.works-container .link-container .works-text p {
+  color: #ffffff;
+}
 @media (max-width: 768px) {
   .works-container .link-container {
     max-width: 90%;
