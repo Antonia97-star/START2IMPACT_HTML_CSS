@@ -17,8 +17,99 @@ $font-heading: "Bowlby One SC", serif;
   font-size: $size;
 
   @media (max-width: 768px) {
-    font-size: $size * 1.2;
+    .navbar {
+      padding: 10px 0;
+    }
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .navbar ul li {
+      margin: 5px 0;
+    }
+    
+    body {
+      padding: 0 15px;
+    }
+  
+    .container {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    .bio-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .bio-photo img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .social-link {
+      gap: 10px;
+      margin-top: 30px; 
+    }
+  
+    .social-link img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .contact-form {
+      max-width: 90%;
+      padding: 20px;
+  
+      h2 {
+        font-size: 30px;
+      }
+  
+      label {
+        font-size: 14px; 
+      }
+  
+      input,
+      textarea {
+        height: 40px;
+        font-size: 14px;
+      }
+  
+      button {
+        cursor: pointer; 
+      }
+    }
+  
+    .works-container .link-container {
+      max-width: 90%;
+    }
+  
+    .paragrafo {
+      width: 100%;
+    }
+  
+    .griglia-immagini {
+      flex-direction: column;
+    }
+
+    .riga img {
+      width: 100%; 
+      height: auto;
+    }
+    
+    @media (max-width: 768px) {
+      .riga img {
+        width: 70%; 
+        max-width: 300px;  
+        margin-bottom: 20px;  
+      }
+    }
+
+    .spazio-vuoto-social {
+      height: 50px;
+    }
   }
+  
 }
 
 body {
@@ -260,6 +351,7 @@ p {
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 
     &:hover {
       background-color: black;
