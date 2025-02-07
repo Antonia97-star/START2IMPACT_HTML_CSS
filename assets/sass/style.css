@@ -15,7 +15,9 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #e6c9e6;
   padding: 10px 0;
-  width: 100%; /* La navbar occupa tutta la larghezza */
+  width: 100vw; /* Occupa tutta la larghezza dello schermo */
+  left: 0; /* Assicura che inizi dal bordo sinistro */
+  right: 0; /* Assicura che termini al bordo destro */
 }
 .navbar ul {
   display: flex;
@@ -50,12 +52,17 @@ body {
 }
 @media (max-width: 768px) {
   .navbar {
-    width: 100%; /* La navbar occupa tutta la larghezza su dispositivi mobili */
-    padding: 15px 0;
+    width: 100vw; /* Assicura che non abbia margini laterali */
+    padding: 10px 0; /* Mantiene il padding verticale ma non laterale */
+    left: 0;
+    right: 0;
   }
   .navbar ul {
     flex-direction: column;
     gap: 10px;
+  }
+  .navbar ul li {
+    margin: 5px 0;
   }
 }
 
@@ -155,7 +162,7 @@ h1 {
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -283,6 +290,7 @@ p {
   .contact-form textarea {
     height: 20px;
     align-items: center;
+    width: 90%;
   }
   .contact-form button {
     font-size: 14px; /* Ridotto su mobile per evitare che diventi troppo grande */
