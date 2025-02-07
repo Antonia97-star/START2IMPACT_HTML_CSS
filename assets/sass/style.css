@@ -1,14 +1,11 @@
+@charset "UTF-8";
 body {
   background-color: #e6c9e6;
   color: #1f1a38;
   margin: 0;
   padding: 0;
   font-family: Urbanist, sans-serif;
-}
-@media (max-width: 768px) {
-  body {
-    padding: 0 15px;
-  }
+  overflow-x: hidden; /* Blocca lo scroll orizzontale */
 }
 
 .navbar {
@@ -19,11 +16,7 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #e6c9e6;
   padding: 10px 0;
-}
-@media (max-width: 768px) {
-  .navbar {
-    width: 100%; /* Assicura che la navbar sia a tutta larghezza */
-  }
+  width: 100%; /* La navbar occupa tutta la larghezza */
 }
 .navbar ul {
   display: flex;
@@ -57,12 +50,13 @@ body {
   border-radius: 5px;
 }
 @media (max-width: 768px) {
+  .navbar {
+    width: 100%; /* La navbar occupa tutta la larghezza su dispositivi mobili */
+    padding: 15px 0;
+  }
   .navbar ul {
     flex-direction: column;
     gap: 10px;
-  }
-  .navbar ul li {
-    margin: 5px 0;
   }
 }
 
@@ -123,11 +117,6 @@ body {
   border: 1px solid #1f1a38;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 768px) {
-  .bio-container {
-    width: 100%;
-  }
-}
 .bio-container .bio-text {
   font-size: 17px;
   font-weight: 500;
@@ -140,6 +129,7 @@ body {
   .bio-container {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
   }
 }
 
@@ -153,7 +143,7 @@ h1 {
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 45px;
+    font-size: 50px;
   }
 }
 
@@ -168,6 +158,7 @@ h2 {
 @media (max-width: 768px) {
   h2 {
     font-size: 30px;
+    padding-left: 0;
   }
 }
 
@@ -177,6 +168,11 @@ h3 {
   padding-left: 20px;
   letter-spacing: 3px;
   font-weight: 900;
+}
+@media (max-width: 768px) {
+  h3 {
+    padding-left: 0;
+  }
 }
 
 p {
@@ -196,18 +192,20 @@ p {
   .paragrafo {
     width: 100%;
     font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 .contact-form {
   max-width: 600px;
-  width: 100%;
+  width: 100%; /* Occupa il 100% della larghezza su dispositivi mobili */
   padding: 30px;
   background-color: #623956;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 100px auto;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Importante per evitare sfalsamenti */
 }
 .contact-form h2 {
   margin-bottom: 20px;
@@ -225,7 +223,7 @@ p {
 }
 .contact-form input,
 .contact-form textarea {
-  height: 30px;
+  height: 40px;
   border-radius: 5px;
   width: 100%;
   margin-bottom: 20px;
@@ -262,8 +260,8 @@ p {
 }
 @media (max-width: 768px) {
   .contact-form {
-    padding: 20px;
     max-width: 90%;
+    padding: 20px;
     margin: 50px auto;
   }
   .contact-form h2 {
@@ -271,7 +269,7 @@ p {
   }
   .contact-form input,
   .contact-form textarea {
-    height: 40px;
+    height: 50px; /* Aumenta l'altezza degli input per migliorare l'usabilità */
   }
   .contact-form button {
     font-size: 14px;
@@ -319,6 +317,11 @@ p {
   color: #ffffff;
 }
 @media (max-width: 768px) {
+  .works-container .link-container .works-text p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
   .works-container .link-container {
     max-width: 90%;
   }
@@ -329,18 +332,18 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%; /* Aggiunto per migliorare la visualizzazione sui dispositivi mobili */
+  width: 100%;
 }
 
 .riga {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Le immagini si adatteranno al contenitore */
+  flex-wrap: wrap;
   width: 100%;
 }
 
 .riga img {
-  width: 500px; /* La larghezza dell'immagine non cambia su desktop */
+  width: 500px;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -355,12 +358,13 @@ p {
     flex-direction: column;
   }
   .riga img {
-    width: 90%; /* Le immagini prenderanno il 90% della larghezza su schermi piccoli */
-    max-width: 350px; /* Impostiamo un limite massimo per evitare che le immagini siano troppo grandi */
+    width: 90%;
+    max-width: 350px;
   }
   .bio-container {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
   }
   .navbar ul {
     flex-direction: column;
@@ -368,6 +372,22 @@ p {
   }
   .paragrafo {
     width: 100%;
+    padding-left: 0;
+  }
+  .contact-form {
+    max-width: 90%;
+    padding: 20px;
+    margin: 50px auto;
+  }
+  .contact-form h2 {
+    font-size: 30px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    height: 50px;
+  }
+  .contact-form button {
+    font-size: 14px;
   }
   body {
     padding: 0 15px;
@@ -375,20 +395,6 @@ p {
   .container {
     padding: 15px;
     width: 100%;
-  }
-  .social-link {
-    gap: 10px;
-  }
-  .social-link img {
-    width: 40px;
-    height: 40px;
-  }
-  .contact-form {
-    max-width: 90%;
-    padding: 20px;
-  }
-  .contact-form h2 {
-    font-size: 30px;
   }
   .works-container .link-container {
     max-width: 90%;
