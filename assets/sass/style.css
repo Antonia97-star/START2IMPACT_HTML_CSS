@@ -20,6 +20,11 @@ body {
   background-color: #e6c9e6;
   padding: 10px 0;
 }
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%; /* Assicura che la navbar sia a tutta larghezza */
+  }
+}
 .navbar ul {
   display: flex;
   flex-direction: row;
@@ -118,6 +123,11 @@ body {
   border: 1px solid #1f1a38;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
+@media (max-width: 768px) {
+  .bio-container {
+    width: 100%;
+  }
+}
 .bio-container .bio-text {
   font-size: 17px;
   font-weight: 500;
@@ -197,6 +207,7 @@ p {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 100px auto;
+  box-sizing: border-box;
 }
 .contact-form h2 {
   margin-bottom: 20px;
@@ -244,6 +255,7 @@ p {
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 .contact-form button:hover {
   background-color: black;
@@ -252,9 +264,17 @@ p {
   .contact-form {
     padding: 20px;
     max-width: 90%;
+    margin: 50px auto;
   }
   .contact-form h2 {
     font-size: 30px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    height: 40px;
+  }
+  .contact-form button {
+    font-size: 14px;
   }
 }
 
