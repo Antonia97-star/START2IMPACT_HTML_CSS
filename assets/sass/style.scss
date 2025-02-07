@@ -131,7 +131,7 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   
     @media (max-width: 768px) {
-      width: 350px; 
+      width: 325px; 
       display: block;
       margin: 0 auto; 
     }
@@ -147,7 +147,7 @@ body {
 
     @media (max-width: 768px) {
       font-size: 15px;
-      width: 350px;
+      width: 325px;
     }
   }
 
@@ -164,10 +164,12 @@ h1 {
   color: $highlight-color;
   letter-spacing: 10px;
   margin-top: 40px;
-  font-size: 80px; /* Ridotto per "CURRICULUM VITAE" e "CONTATTAMI" */
+  font-size: 90px;
 
   @media (max-width: 768px) {
-    font-size: 50px;  /* Ancora più piccolo su mobile */
+    font-size: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -287,17 +289,15 @@ p {
 
   @media (max-width: 768px) {
     max-width: 90%;  /* Occupa quasi tutta la larghezza del dispositivo mobile */
-    padding: 20px;
-    margin: 50px auto;
+    padding: 10px;
+    margin: 40px auto;
     align-items: stretch;
 
-    h2 {
-      font-size: 30px;  /* Ridotto su mobile per una migliore leggibilità */
-    }
 
     input,
     textarea {
-      height: 50px;  /* Più alti per migliorare l'usabilità su touch */
+      height: 20px;
+      align-items: center;
     }
 
     button {

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   background-color: #e6c9e6;
   color: #1f1a38;
@@ -119,7 +118,7 @@ body {
 }
 @media (max-width: 768px) {
   .bio-container .bio-photo img {
-    width: 350px;
+    width: 325px;
     display: block;
     margin: 0 auto;
   }
@@ -135,7 +134,7 @@ body {
 @media (max-width: 768px) {
   .bio-container .bio-text {
     font-size: 15px;
-    width: 350px;
+    width: 325px;
   }
 }
 @media (max-width: 768px) {
@@ -152,11 +151,13 @@ h1 {
   color: #1f1a38;
   letter-spacing: 10px;
   margin-top: 40px;
-  font-size: 80px; /* Ridotto per "CURRICULUM VITAE" e "CONTATTAMI" */
+  font-size: 90px;
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 50px; /* Ancora più piccolo su mobile */
+    font-size: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -274,16 +275,14 @@ p {
 @media (max-width: 768px) {
   .contact-form {
     max-width: 90%; /* Occupa quasi tutta la larghezza del dispositivo mobile */
-    padding: 20px;
-    margin: 50px auto;
+    padding: 10px;
+    margin: 40px auto;
     align-items: stretch;
-  }
-  .contact-form h2 {
-    font-size: 30px; /* Ridotto su mobile per una migliore leggibilità */
   }
   .contact-form input,
   .contact-form textarea {
-    height: 50px; /* Più alti per migliorare l'usabilità su touch */
+    height: 20px;
+    align-items: center;
   }
   .contact-form button {
     font-size: 14px; /* Ridotto su mobile per evitare che diventi troppo grande */
