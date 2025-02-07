@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #e6c9e6;
   color: #1f1a38;
@@ -14,10 +15,10 @@ body {
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #e6c9e6;
-  padding: 10px 0;
-  width: 100vw; /* Occupa tutta la larghezza dello schermo */
-  left: 0; /* Assicura che inizi dal bordo sinistro */
-  right: 0; /* Assicura che termini al bordo destro */
+  width: 100%; /* Occupa tutta la larghezza dello schermo */
+  left: 0;
+  right: 0;
+  /* STILI PER MOBILE */
 }
 .navbar ul {
   display: flex;
@@ -40,6 +41,8 @@ body {
   font-size: 18px;
   padding: 10px 20px;
   transition: background-color 0.3s ease;
+  display: block; /* Rende il link un blocco intero */
+  width: 100%; /* Impedisce che si allarghi al passaggio del mouse */
 }
 @media (max-width: 768px) {
   .navbar ul li a {
@@ -49,20 +52,34 @@ body {
 .navbar ul li a:hover {
   background-color: #C8A2C8;
   border-radius: 5px;
+  padding-left: 20px; /* Mantiene l'integrità del layout */
+  padding-right: 20px; /* Impedisce espansioni non volute */
 }
 @media (max-width: 768px) {
   .navbar {
-    width: 100vw; /* Assicura che non abbia margini laterali */
-    padding: 10px 0; /* Mantiene il padding verticale ma non laterale */
+    width: 100%; /* Assicura che la navbar si estenda completamente */
+    padding: 10px 0;
     left: 0;
     right: 0;
   }
   .navbar ul {
     flex-direction: column;
     gap: 10px;
+    width: 100%; /* Occupa tutto lo spazio disponibile */
   }
   .navbar ul li {
-    margin: 5px 0;
+    width: 100%; /* Estende ogni voce di menu */
+    text-align: center;
+  }
+  .navbar ul li a {
+    display: block; /* Rende i link più cliccabili */
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box; /* Impedisce l'overflow */
+  }
+  .navbar ul li a:hover {
+    background-color: #C8A2C8;
+    border-radius: 5px;
   }
 }
 

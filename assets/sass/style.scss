@@ -37,10 +37,9 @@ body {
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background-color: $background-dark;
-  padding: 10px 0;
-  width: 100vw;  /* Occupa tutta la larghezza dello schermo */
-  left: 0;  /* Assicura che inizi dal bordo sinistro */
-  right: 0; /* Assicura che termini al bordo destro */
+  width: 100%; /* Occupa tutta la larghezza dello schermo */
+  left: 0;
+  right: 0;
 
   ul {
     @include flex-center(row, 20px);
@@ -59,27 +58,46 @@ body {
         @include responsive-font(18px);
         padding: 10px 20px;
         transition: background-color 0.3s ease;
+        display: block; /* Rende il link un blocco intero */
+        width: 100%; /* Impedisce che si allarghi al passaggio del mouse */
 
         &:hover {
           background-color: $link-hover;
           border-radius: 5px;
+          padding-left: 20px; /* Mantiene l'integrità del layout */
+          padding-right: 20px; /* Impedisce espansioni non volute */
         }
       }
     }
   }
 
+  /* STILI PER MOBILE */
   @media (max-width: 768px) {
-    width: 100vw;  /* Assicura che non abbia margini laterali */
-    padding: 10px 0;  /* Mantiene il padding verticale ma non laterale */
+    width: 100%;  /* Assicura che la navbar si estenda completamente */
+    padding: 10px 0;
     left: 0;
     right: 0;
 
     ul {
       flex-direction: column;
       gap: 10px;
+      width: 100%; /* Occupa tutto lo spazio disponibile */
 
       li {
-        margin: 5px 0;
+        width: 100%; /* Estende ogni voce di menu */
+        text-align: center;
+
+        a {
+          display: block; /* Rende i link più cliccabili */
+          padding: 12px;
+          width: 100%;
+          box-sizing: border-box; /* Impedisce l'overflow */
+        }
+
+        a:hover {
+          background-color: $link-hover;
+          border-radius: 5px;
+        }
       }
     }
   }
