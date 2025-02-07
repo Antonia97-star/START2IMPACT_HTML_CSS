@@ -43,81 +43,8 @@ body {
   transition: background-color 0.3s ease;
 }
 @media (max-width: 768px) {
-  .navbar ul li a .navbar {
-    padding: 10px 0;
-  }
-  .navbar ul li a .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .navbar ul li a .navbar ul li {
-    margin: 5px 0;
-  }
-  .navbar ul li a body {
-    padding: 0 15px;
-  }
-  .navbar ul li a .container {
-    padding: 15px;
-    width: 100%;
-  }
-  .navbar ul li a .bio-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .navbar ul li a .bio-photo img {
-    width: 100%;
-    height: auto;
-  }
-  .navbar ul li a .social-link {
-    gap: 10px;
-    margin-top: 30px;
-  }
-  .navbar ul li a .social-link img {
-    width: 40px;
-    height: 40px;
-  }
-  .navbar ul li a .contact-form {
-    max-width: 90%;
-    padding: 20px;
-  }
-  .navbar ul li a .contact-form h2 {
-    font-size: 30px;
-  }
-  .navbar ul li a .contact-form label {
-    font-size: 14px;
-  }
-  .navbar ul li a .contact-form input,
-  .navbar ul li a .contact-form textarea {
-    height: 40px;
-    font-size: 14px;
-  }
-  .navbar ul li a .contact-form button {
-    cursor: pointer;
-  }
-  .navbar ul li a .works-container .link-container {
-    max-width: 90%;
-  }
-  .navbar ul li a .paragrafo {
-    width: 100%;
-  }
-  .navbar ul li a .griglia-immagini {
-    flex-direction: column;
-  }
-  .navbar ul li a .riga img {
-    width: 100%;
-    height: auto;
-  }
-}
-@media (max-width: 768px) and (max-width: 768px) {
-  .navbar ul li a .riga img {
-    width: 70%;
-    max-width: 300px;
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .navbar ul li a .spazio-vuoto-social {
-    height: 50px;
+  .navbar ul li a {
+    font-size: 21.6px;
   }
 }
 .navbar ul li a:hover {
@@ -216,7 +143,7 @@ h1 {
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
 }
 
@@ -258,6 +185,7 @@ p {
 @media (max-width: 768px) {
   .paragrafo {
     width: 100%;
+    font-size: 14px;
   }
 }
 
@@ -316,7 +244,6 @@ p {
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  cursor: pointer;
 }
 .contact-form button:hover {
   background-color: black;
@@ -382,16 +309,21 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%; /* Aggiunto per migliorare la visualizzazione sui dispositivi mobili */
 }
 
 .riga {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Le immagini si adatteranno al contenitore */
+  width: 100%;
 }
 
 .riga img {
-  width: 500px;
+  width: 500px; /* La larghezza dell'immagine non cambia su desktop */
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .spazio-vuoto-social {
@@ -399,6 +331,13 @@ p {
 }
 
 @media (max-width: 768px) {
+  .griglia-immagini {
+    flex-direction: column;
+  }
+  .riga img {
+    width: 90%; /* Le immagini prenderanno il 90% della larghezza su schermi piccoli */
+    max-width: 350px; /* Impostiamo un limite massimo per evitare che le immagini siano troppo grandi */
+  }
   .bio-container {
     flex-direction: column;
     gap: 20px;
