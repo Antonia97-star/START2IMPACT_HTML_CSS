@@ -73,30 +73,18 @@ body {
 
   /* STILI PER MOBILE */
   @media (max-width: 768px) {
-    width: 100%;  /* Assicura che la navbar si estenda completamente */
-    padding: 10px 0;
-    left: 0;
-    right: 0;
+    padding: 3px 0; /* Ridotto ancora il padding verticale */
 
     ul {
       flex-direction: column;
-      gap: 10px;
-      width: 100%; /* Occupa tutto lo spazio disponibile */
+      gap: 5px; /* Minore spazio tra i link */
 
       li {
-        width: 100%; /* Estende ogni voce di menu */
-        text-align: center;
+        margin: 2px 0; /* Minore margine tra i link */
 
         a {
-          display: block; /* Rende i link più cliccabili */
-          padding: 12px;
-          width: 100%;
-          box-sizing: border-box; /* Impedisce l'overflow */
-        }
-
-        a:hover {
-          background-color: $link-hover;
-          border-radius: 5px;
+          font-size: 12px; /* Ridotto il font per mobile */
+          padding: 5px 8px; /* Reso più compatto */
         }
       }
     }
@@ -315,24 +303,29 @@ p {
   }
 
   @media (max-width: 768px) {
-    max-width: 90%;  /* Occupa quasi tutta la larghezza del dispositivo mobile */
+    max-width: 100%;  /* Occupa quasi tutta la larghezza del dispositivo mobile */
     padding: 10px;
     margin: 40px auto;
     align-items: stretch;
-
-
+  
     input,
     textarea {
-      height: 20px;
-      align-items: center;
-      width: 90%;
+      height: 40px; /* Altezza più consistente */
+      width: 100%; /* Stessa larghezza del bottone */
+      box-sizing: border-box; /* Evita che padding e border allarghino l'elemento */
     }
-
+  
+    textarea {
+      min-height: 80px; /* Imposta un'altezza minima adeguata */
+      resize: vertical; /* Permette di ridimensionare solo verticalmente */
+    }
+  
     button {
-      font-size: 14px;  /* Ridotto su mobile per evitare che diventi troppo grande */
+      font-size: 14px;  
+      width: 100%; /* Stessa larghezza degli input e textarea */
     }
   }
-}
+  
 
 .main-content {
   padding: 1rem;
