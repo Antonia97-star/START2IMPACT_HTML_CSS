@@ -73,7 +73,7 @@ body {
 
   /* STILI PER MOBILE */
   @media (max-width: 768px) {
-    padding: 3px 0; /* Ridotto ancora il padding verticale */
+    padding: 5px 0; /* Ridotto ancora il padding verticale */
 
     ul {
       flex-direction: column;
@@ -83,8 +83,8 @@ body {
         margin: 2px 0; /* Minore margine tra i link */
 
         a {
-          font-size: 12px; /* Ridotto il font per mobile */
-          padding: 5px 8px; /* Reso più compatto */
+          font-size: 8px; /* Ridotto il font per mobile */
+          padding: 5px 10px; /* Reso più compatto */
         }
       }
     }
@@ -316,7 +316,7 @@ p {
     }
   
     textarea {
-      min-height: 80px; /* Imposta un'altezza minima adeguata */
+      min-height: 85px; /* Imposta un'altezza minima adeguata */
       resize: vertical; /* Permette di ridimensionare solo verticalmente */
     }
   
