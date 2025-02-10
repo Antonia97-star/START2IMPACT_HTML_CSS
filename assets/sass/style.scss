@@ -13,13 +13,6 @@ $font-heading: "Bowlby One SC", serif;
   gap: $gap;
 }
 
-@mixin responsive-font($size) {
-  font-size: $size;
-
-  @media (max-width: 768px) {
-    font-size: $size * 1.2;
-  }
-}
 
 body {
   background-color: $background-dark;
@@ -41,6 +34,7 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background-color: $background-dark;
   padding: 10px 0;
+  width: 100%; 
 
   ul {
     @include flex-center(row, 20px);
@@ -56,7 +50,7 @@ body {
         text-decoration: none;
         color: $text-color;
         font-weight: bold;
-        @include responsive-font(18px);
+        font-size: 18px; 
         padding: 10px 20px;
         transition: background-color 0.3s ease;
 
@@ -69,18 +63,25 @@ body {
   }
 
   @media (max-width: 768px) {
+    width: 100%; 
+    padding: 5px 0;  
+    
+   
     ul {
-      flex-direction: column;
-      gap: 10px;
+      flex-direction: row;  
+      gap: 10px;  
+    }
 
-      li {
-        margin: 5px 0;
-        font-size: 6px;
-      }
+    li {
+      margin: 0; 
+    }
+
+    a {
+      font-size: 16px;  
+      padding: 5px 15px;  
     }
   }
 }
-
 
 .container {
   max-width: $container-max-width;
@@ -226,8 +227,8 @@ p {
 }
 
 .contact-form {
-  max-width: 600px;  /* Mantieni la larghezza massima su desktop */
-  width: 100%;  /* Imposta la larghezza su 100% per dispositivi mobili */
+  max-width: 600px; 
+  width: 100%;  
   padding: 30px;
   background-color: #623956;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -294,26 +295,26 @@ p {
   }
 
   @media (max-width: 768px) {
-    max-width: 100%;  /* Occupa quasi tutta la larghezza del dispositivo mobile */
+    max-width: 100%;
     padding: 10px;
     margin: 40px auto;
     align-items: stretch;
   
     input,
     textarea {
-      height: 40px; /* Altezza più consistente */
-      width: 100%; /* Stessa larghezza del bottone */
-      box-sizing: border-box; /* Evita che padding e border allarghino l'elemento */
+      height: 40px; 
+      width: 100%; 
+      box-sizing: border-box; 
     }
   
     textarea {
-      min-height: 85px; /* Imposta un'altezza minima adeguata */
-      resize: vertical; /* Permette di ridimensionare solo verticalmente */
+      min-height: 85px;
+      resize: vertical; 
     }
   
     button {
       font-size: 14px;  
-      width: 100%; /* Stessa larghezza degli input e textarea */
+      width: 100%; 
     }
   }
 } 
