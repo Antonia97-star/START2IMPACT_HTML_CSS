@@ -28,18 +28,45 @@ wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/sass/style.css">
 <body>
  
+  <nav class="navbar"> 
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+    <li><a href="contattami.html">CONTACT ME</a></li>
+    <li><a href="resume.html">RESUME ME</a></li>
+    <li><a href="works.html">WORKS</a></li>
+    </ul>
+  </nav>
+  
+  
+  <div class="off-screen-menu">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="contattami.html">CONTACT ME</a></li>
+      <li><a href="resume.html">RESUME ME</a></li>
+      <li><a href="works.html">WORKS</a></li>
+    </ul>
+  </div>
+    
+  <nav>
+    <div class="ham-menu-container">
+    <div class="ham-menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </div>
+  </nav>
 
-    <nav class="navbar"> 
-      
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-        <li><a href="contattami.html">CONTACT ME</a></li>
-        <li><a href="resume.html">RESUME ME</a></li>
-        <li><a href="works.html">WORKS</a></li>
-        </ul>
-      </nav>
-      
+  <script>
+const hamMenu = document.querySelector(".ham-menu");
 
+const offScreenMenu = document.querySelector(".off-screen-menu");
+
+hamMenu.addEventListener("click", () => {
+hamMenu.classList.toggle("active");
+offScreenMenu.classList.toggle("active");
+});
+  </script>
 
   <h1> CONTATTAMI </h1>
 

@@ -13,7 +13,6 @@ $font-heading: "Bowlby One SC", serif;
   gap: $gap;
 }
 
-
 body {
   background-color: $background-dark;
   color: $text-color;
@@ -26,6 +25,49 @@ body {
   }
 }
 
+.off-screen-menu {
+  background-color: #e6c9e6;
+  height: 100vh;
+  width: 70%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 5px;    
+  justify-content:center;
+  transition: left 0.3s ease;
+}
+
+.off-screen-menu ul {
+  text-align: left;
+  list-style-type:  none;
+  font-size: 30px;
+  margin: 10px;
+  padding: 0;
+}
+
+.off-screen-menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1f1a38;
+  line-height: 2.5;
+  transition: transform 0.3s ease;
+}
+
+.off-screen-menu a:hover {
+  transform: scale(1.0); /* Aumenta la dimensione del testo al 120% al passaggio del mouse */
+  color: #ff00b7;
+  font-size: 31px;
+}
+
+.off-screen-menu.active {
+  left: 0;
+}
+
+
 .navbar {
   position: sticky;
   top: 0;
@@ -34,7 +76,7 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   background-color: $background-dark;
   padding: 10px 0;
-  width: 100%; 
+  width: 100%;
 
   ul {
     @include flex-center(row, 20px);
@@ -61,27 +103,83 @@ body {
       }
     }
   }
+} 
 
-  @media (max-width: 768px) {
-    width: 100%; 
-    padding: 5px 0;  
-    
-   
-    ul {
-      flex-direction: row;  
-      gap: 10px;  
-    }
 
-    li {
-      margin: 0; 
-    }
+@media (max-width: 768px) {
 
-    a {
-      font-size: 16px;  
-      padding: 5px 15px;  
-    }
-  }
+ .navbar {
+  display: none;
+ }
+  
+
+/* Menu hamburger */
+.ham-menu-container {
+  position: fixed;  /* Fissa la barra in alto */
+  top: 0;
+  left: 0;
+  width: 100%;  /* Larghezza piena */
+  height: 50px;  /* Altezza della barra */
+  background-color: #e6c9e6; /* Cambia il colore di sfondo a piacere */
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Spazio interno ai lati */
+  z-index: 1100; /* Mantiene la barra sopra gli altri elementi */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.ham-menu {
+  height: 50px;
+  width: 40px;
+  position: fixed;  /* Posizionato a sinistra */
+  left: 10px;          /* Posizionato a sinistra della pagina */
+  top: 0;
+  cursor: pointer;
+  z-index: 1100;       /* Per avere sempre sopra gli altri elementi */
+}
+
+
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #1f1a38;  /* Colore iniziale */
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+
+/* Posizione degli span nell'hamburger */
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+/* Quando il menu è attivo (menu aperto), la "X" cambia */
+.ham-menu.active span {
+  background-color: #1f1a38;  /* La X non sarà più bianca, ma dello stesso colore iniziale dell'hamburger */
+}
+
+/* Rotazione degli span quando il menu è attivo */
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0; /* Nasconde il secondo span */
+}
+
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+}
+
 
 .container {
   max-width: $container-max-width;
@@ -93,7 +191,7 @@ body {
     width: 100%;
   }
 }
-
+ 
 .social-link {
   display: flex;
   align-items: center;
@@ -176,6 +274,7 @@ h1 {
     font-size: 30px;
     padding-left: 0;
     padding-right: 0;
+    margin-top: 70px;
   }
 }
 
